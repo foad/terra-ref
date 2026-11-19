@@ -1,3 +1,4 @@
+import { ZoomableImage } from "@/components/zoomable-image"
 import { cn } from "@/lib/utils"
 
 export function BrowserFrame({
@@ -26,7 +27,7 @@ export function BrowserFrame({
           {url}
         </span>
       </div>
-      <img src={src} alt={alt} className="block w-full" loading="lazy" />
+      <ZoomableImage src={src} alt={alt} className="block w-full" imgClassName="block w-full" />
     </figure>
   )
 }

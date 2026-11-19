@@ -13,6 +13,7 @@ import {
 
 import { BrowserFrame } from "@/components/browser-frame"
 import { GithubIcon } from "@/components/github-icon"
+import { ZoomableImage } from "@/components/zoomable-image"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
@@ -138,10 +139,11 @@ function Hero() {
             src={heatmap}
             alt="Analyst dashboard showing a severity heatmap over the crisis zone"
           />
-          <img
+          <ZoomableImage
             src={aiSuggestion}
             alt="Phone showing the AI's damage suggestion with a confidence score"
-            className="absolute -bottom-6 left-2 w-[30%] drop-shadow-2xl sm:w-[24%] lg:-bottom-16 lg:-left-10 lg:w-[34%]"
+            className="absolute -bottom-6 left-2 w-[30%] sm:w-[24%] lg:-bottom-16 lg:-left-10 lg:w-[34%]"
+            imgClassName="w-full drop-shadow-2xl"
           />
         </div>
       </div>
@@ -207,11 +209,11 @@ function HowItWorks() {
           {steps.map((step, i) => (
             <div key={step.title} className="flex flex-col">
               <div className="flex h-80 items-end justify-center">
-                <img
+                <ZoomableImage
                   src={step.img}
                   alt={step.alt}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
+                  className="flex h-full w-full items-end justify-center"
+                  imgClassName="max-h-full max-w-full object-contain"
                 />
               </div>
               <div className="mt-6 flex items-center gap-3">
@@ -299,7 +301,12 @@ function Gallery() {
           {gallery.map(({ img, caption }) => (
             <figure key={caption} className="flex flex-col items-center">
               <div className="flex h-64 items-center justify-center sm:h-96">
-                <img src={img} alt={caption} loading="lazy" className="max-h-full object-contain" />
+                <ZoomableImage
+                  src={img}
+                  alt={caption}
+                  className="flex h-full w-full items-center justify-center"
+                  imgClassName="max-h-full max-w-full object-contain"
+                />
               </div>
               <figcaption className="mt-4 text-center text-sm font-semibold text-undp-gray-700">
                 {caption}
@@ -347,9 +354,12 @@ function UnderTheHood() {
           The whole stack is defined in Terraform, and its compute costs nothing when idle.
         </SectionHeading>
         <div className="bg-white p-4 shadow-sm ring-1 ring-black/5 md:p-8">
-          <a href={architecture} target="_blank" rel="noreferrer">
-            <img src={architecture} alt="TERRA system architecture diagram" loading="lazy" className="w-full" />
-          </a>
+          <ZoomableImage
+            src={architecture}
+            alt="TERRA system architecture diagram"
+            className="block w-full"
+            imgClassName="w-full"
+          />
         </div>
         <div className="mt-10 text-center">
           <a href={REPO_URL} className={buttonVariants({ variant: "undp", size: "xl" })}>
