@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("@undp/design-system-assets/fonts/proximanova-regular-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("@undp/design-system-assets/fonts/proximanova-semibold-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("@undp/design-system-assets/fonts/proximanova-bold-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("@undp/design-system-assets/fonts/proximanova-extrabold-webfont.woff2") format("woff2");
+}
+
+@theme inline {
+  --font-sans: ProximaNova, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: var(--font-sans);
+
+  --color-undp-blue: #006eb5;
+  --color-undp-blue-700: #1f5a95;
+  --color-undp-blue-100: #b5d5f5;
+  --color-undp-red: #ee402d;
+  --color-undp-red-600: #d12800;
+  --color-undp-gray-200: #f7f7f7;
+  --color-undp-gray-300: #edeff0;
+  --color-undp-gray-400: #d4d6d8;
+  --color-undp-gray-600: #55606e;
+  --color-undp-gray-700: #232e3d;
+  --color-damage-minimal: #16a34a;
+  --color-damage-partial: #d97706;
+  --color-damage-complete: #dc2626;
+  --color-priority: #7c3aed;
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --radius-2xl: var(--radius);
+  --radius-3xl: var(--radius);
+  --radius-4xl: var(--radius);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #006eb5;
+  --primary-foreground: #ffffff;
+  --secondary: #edeff0;
+  --secondary-foreground: #232e3d;
+  --muted: #f7f7f7;
+  --muted-foreground: #55606e;
+  --accent: #edeff0;
+  --accent-foreground: #232e3d;
+  --destructive: #d12800;
+  --border: #d4d6d8;
+  --input: #d4d6d8;
+  --ring: #3288ce;
+  --radius: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 112.5%;
+    }
+  }
+  @media (min-width: 2400px) {
+    html {
+      font-size: 137.5%;
+    }
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
