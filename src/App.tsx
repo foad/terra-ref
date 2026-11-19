@@ -13,7 +13,6 @@ import {
 
 import { BrowserFrame } from "@/components/browser-frame"
 import { GithubIcon } from "@/components/github-icon"
-import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
@@ -126,7 +125,11 @@ function Hero() {
             </a>
           </div>
           <p className="mt-6 text-sm text-undp-gray-600">
-            Built in 2026. The live deployment has now been retired.
+            Built in 2026 for UNDP's{" "}
+            <a href={COMPETITION_URL} className="font-semibold text-undp-blue hover:underline">
+              Build the Future of Crisis Mapping
+            </a>{" "}
+            challenge. The live deployment has now been retired.
           </p>
         </div>
 
@@ -336,18 +339,6 @@ function Scale() {
   )
 }
 
-const stack = [
-  "React PWA",
-  "MapLibre",
-  "Python on AWS Lambda",
-  "PostgreSQL + PostGIS",
-  "H3 indexing",
-  "Amazon S3",
-  "Claude on Amazon Bedrock",
-  "Cognito",
-  "Terraform",
-]
-
 function UnderTheHood() {
   return (
     <section className="bg-undp-gray-200 py-24">
@@ -355,13 +346,6 @@ function UnderTheHood() {
         <SectionHeading eyebrow="Under the hood" title="Serverless, open source, rebuilt from code">
           The whole stack is defined in Terraform, and its compute costs nothing when idle.
         </SectionHeading>
-        <div className="mb-10 flex flex-wrap justify-center gap-2">
-          {stack.map((item) => (
-            <Badge key={item} variant="outline" className="h-7 bg-white px-3 text-[13px] font-semibold">
-              {item}
-            </Badge>
-          ))}
-        </div>
         <div className="bg-white p-4 shadow-sm ring-1 ring-black/5 md:p-8">
           <a href={architecture} target="_blank" rel="noreferrer">
             <img src={architecture} alt="TERRA system architecture diagram" loading="lazy" className="w-full" />
