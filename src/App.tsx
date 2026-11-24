@@ -1,12 +1,10 @@
 import {
-  ArrowUpRight,
   Building2,
   Languages,
   Play,
   QrCode,
   ShieldCheck,
   Sparkles,
-  Trophy,
   WifiOff,
   type LucideIcon,
 } from "lucide-react"
@@ -93,21 +91,6 @@ function Hero() {
     <section className="overflow-hidden bg-gradient-to-b from-white to-undp-gray-200">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pt-16 pb-20 lg:grid-cols-[1fr_1.25fr] lg:pt-24 lg:pb-28">
         <div>
-          <a
-            href={COMPETITION_URL}
-            className="group mb-8 inline-flex items-center gap-2.5 border border-undp-gray-400 bg-white py-1.5 pr-3 pl-1.5 text-sm shadow-sm transition-colors hover:border-undp-blue"
-          >
-            <span className="flex shrink-0 items-center gap-1.5 bg-gradient-to-b from-[#f4f5f6] to-[#bfc5cb] whitespace-nowrap px-2 py-0.5 text-xs font-bold tracking-wider text-undp-gray-700 uppercase ring-1 ring-[#a9b1b7] ring-inset">
-              <Trophy className="size-3.5" />
-              <span>
-                2<sup className="relative -top-[0.45em] align-baseline text-[0.7em] normal-case">nd</sup> place
-              </span>
-            </span>
-            <span className="font-semibold text-undp-gray-700">
-              UNDP · Build the Future of Crisis Mapping
-            </span>
-            <ArrowUpRight className="size-4 text-undp-gray-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
           <Eyebrow>Tool for Early Reporting and Rapid Assessment</Eyebrow>
           <h1 className="mt-4 text-4xl leading-[1.05] font-extrabold tracking-tight md:text-6xl lg:text-5xl xl:text-6xl">
             Damage reports from the people who are there.
